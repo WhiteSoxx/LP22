@@ -1,0 +1,51 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 ArialMT;\f2\fswiss\fcharset0 Arial-BoldMT;
+}
+{\colortbl;\red255\green255\blue255;\red26\green26\blue26;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c13333\c13333\c13333;\cssrgb\c100000\c100000\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 FAQs\
+\
+Q: Devo p\'f4r o c\'f3digo entre coment\'e1rios? No projecto diz /*Codigo*/\
+A: Certamente que n\'e3o. N\'e3o havia maneira de ter um ficheiro em Prolog, sem erros, com a palavra C\'f3digo a meio, e, por isso, aparece comentado. O vosso c\'f3digo n\'e3o deve obviamente estar comentado ou nem seria poss\'edvel ser avaliado.\
+\
+================\
+Q: \'c9 normal no ocupacaoCritica/4 aparecer \
+\
+\'85 casosCriticos(segunda-feira,grandesAnfiteatros,89),\
+    casosCriticos(segunda-feira,grandesAnfiteatros,95), \'85\
+\
+A: Sim. S\'f3 faz sentido fazer o c\'e1lculo por per\'edodo.\
+\
+================\
+Q: 
+\f1\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
+No predicado organizaDisciplinas(ListaDisciplinas, Curso, L) as disciplinas que ocorrem em dois semestres devem aparecer nas duas listas de L?\
+\
+A: N\'e3o. Tipicamente, a n\'e3o ser em casos de excep\'e7\'e3o, n\'e3o existem disciplinas que ocorram em anos diferentes e em semestres diferentes, no mesmo curso; por outro lado, assume-se que n\'e3o existem disciplinas anuais, tal como \'e9 dito no enunciado. Assim, assuma que se for encontrada uma disciplina que ocorra em dois semestres, esta deve ser colocada apenas na lista relativa ao primeiro semestre, tal como exemplificado no enunciado (caso de 
+\f2\b \'92avaliacao de projetos\'92
+\f1\b0 ).\
+\
+===============\
+Q: Em que casos n\'e3o posso usar predicados de ordem superior?\
+A: Como \'e9 dito no enunciado, apenas nos predicados 4 (organizaEventos/3) e 8 (organizaDisciplinas/3).\
+\
+===============\
+Q: Ainda sobre os predicados anteriores (4 e 8) posso usar predicados auxiliares implementados por mim e/ou predicados das bibliotecas do Prolog que n\'e3o gerem necessariamente um processo recursivo/iterativo?\
+A: Sim. Desde que a base do predicado principal gere um processo recursivo ou iterativo, podes recorrer-te de predicados auxiliares implementados por ti e/ou predicados das bibliotecas do Prolog (exemplo, nth1/3, length/2, etc.).\
+\
+===============\
+Q: No evolucaoHorasCurso/2, no mestrado s\'f3 existem 2 anos, mas deverei considerar o terceiro ano a zeros?\
+A: Sim, dado que \'e9 assim que ser\'e1 avaliado.\
+\
+===============\
+Q: Como devo escrever o meu c\'f3digo de modo a facilitar a leitura?\
+A: Para al\'e9m dos coment\'e1rios (se longos, usar /*\'85*/; se curtos %), as linhas n\'e3o devem ser muito longas (n\'e3o dever\'e1 ser necess\'e1rio fazer scroll para ver uma linha de c\'f3digo) e deve ser mantida uma indenta\'e7\'e3o constante a partir da segunda linha de cada regra (ver o Manual de Sobreviv\'eancia em Prolog do livro do Prof. Pav\'e3o Martins). Exemplo:\
+\
+bla-bla :- bla-bla, bla-bla,\
+               bla-bla,\
+               bla-bla,\
+               bla-bla.\
+}
